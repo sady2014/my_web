@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QQ 登陆界面</title>
+    <style type="text/css">
+        #content{
+            position: absolute;
+            width: 435px;
+            height: 333px;
+            top:50%;
+            left: 50%;
+            margin-top: -166px;
+            margin-left: -217px;
+        }
+        #login{
+            width: 435px;height: 333px;border: 1px solid gray;background: rgb(235,242,249);
+        }
+        .images{
+            width: 435px;height: 185px;background:url(images/title.gif) no-repeat;background-size: 100%;
+        }
+
+        /*margin-left= 4+margin-right= 10 +width= 80 + width= 200 + font-size =14*4 = 350 px;*/
+        .lg_input{
+            position: relative;
+            left: 50%;
+            top: 15px;
+            margin-left: -175px;
+        }
+        #logo{
+            width: 80px;height: 80px;float: left; margin-right: 10px;border-radius: 40px;
+        }
+
+        #logo img{
+            width: 80px;height: 80px;border-radius: 40px;
+        }
+        #ipt{
+            float: left;
+        }
+        #ipt li{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #ipt li a{
+            font-size: 14px;
+            color: rgb(100,172,255);
+            text-decoration: none;
+            margin-left: 4px;
+            display: inline-block;
+        }
+        #ipt li input{
+            width: 200px;
+            height: 25px;
+            border-radius: 3px 3px 0 0;
+            border: 1px solid #D1D1D1;
+        }
+        #ipt p{
+            margin-top: 2px
+        }
+        #button{
+            width: 200px;
+            height: 25px;
+            color: white;
+            display: block;
+            font-size: 12px;
+            text-align: center;
+            line-height: 25px;
+            border-radius: 3px;
+            background: rgb(9,163,220);
+            border:2px solid rgb(9,163,220);
+        }
+        #ipt input:focus{
+            /*outline: none;*/
+            outline-color: red;
+            outline-style:
+
+        }
+        .plus{
+            position: relative;
+            bottom: 20px;
+            left: -120px;
+        }
+        .code{
+            position: relative;
+            bottom: 45px;
+            right: -265px;
+        }
+        /*.chk{
+            position: absolute;
+            top: -3px;
+            width: 19px;
+             height: 25px;
+            background: url(images/checkbox.png) no-repeat;
+        }
+        .chk:hover{
+            position: absolute;
+            top: -3px;
+            width: 19px;
+             height: 25px;
+            background: url(images/checkbox.png) 0 -50px no-repeat;
+        }*/
+
+        /*checkbox设置????*/
+
+        #label1{
+            cursor: pointer;
+            position: absolute;
+            width: 13px;
+            height: 13px;
+            top: 3px;
+            left: 3px;
+            background: #FFFFFF;
+            border:1px solid #ddd;
+        }
+        #label2{
+            cursor: pointer;
+            position: absolute;
+            width: 13px;
+            height: 13px;
+            top: 3px;
+            left: 95px;
+            background: #FFFFFF;
+            border:1px solid #ddd;
+        }
+
+        label:after{
+            opacity: 0;
+            content: '';
+            position: absolute;
+            width: 7px;
+            height: 3px;
+            /*background: transparent;*/
+            top: 1px;
+            left: 1px;
+            border: 3px solid white;
+            border-top: none;
+            border-right: none;
+            transform: rotate(-50deg);
+
+        }
+        #checkbox1:checked + label:after {
+            opacity: 1;
+        }
+        #checkbox2:checked + label:after {
+            opacity: 1;
+        }
+        #checkbox1:checked + #label1, #checkbox2:checked + #label2{
+            background: #3076C1;
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="content">
+    <div id="login">
+        <div class="images"></div>
+        <!-- 输入区域 -->
+        <div class="lg_input">
+				<span>
+					<div id="logo">	
+						<img src="images/head.jpg" alt="Warlue">	
+					</div>
+					<div id="ipt">
+						<li><input type="text" name="" style="border-bottom: 0px"><a href="#">注册账号</a></li>
+						<li><input type="password" name="" style="border-radius: 0 0 3px 3px"><a href="#">找回密码</a></li>
+						<p style="position: relative;">
+							<!-- <span class="chk"></span> -->
+							<input type="checkbox" name="checkbox" id="checkbox1">记住密码
+							<label for="checkbox1" id="label1"></label>
+							<input type="checkbox" name="checkbox" id="checkbox2">自动登录
+							<label for="checkbox2" id="label2"></label>
+						</p>
+						<li><span id="button" value="登  陆">登&nbsp;陆</span></li>
+						<div class="plus"><img src="images/plus.png" alt=""></div>
+						<div class="code"><img src="images/code.png" alt=""></div>
+					</div>
+				</span>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+<!-- 纯DIV checkbox默认样式 -->
